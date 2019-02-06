@@ -2,7 +2,7 @@
   "name": "anthonyjcastro-dot-com",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://anthony-j-castro.github.io/anthonyjcastro-dot-com/",
+  "homepage": "https://www.anthonyjcastro.com/",
   "dependencies": {
     "@githubprimer/octicons-react": "^8.3.0",
     "html-react-parser": "^0.6.1",
@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
