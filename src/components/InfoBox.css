@@ -1,0 +1,19 @@
+.infobox {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.8em;
+  background-color: var(--white);
+  padding: 8px;
+  border: 1px solid var(--lighter-gray);
+  border-radius: 2px;
+  margin-bottom: var(--roomier-margin);
+}
+
+.infobox .octicon {
+  flex-shrink: 0;
+  color: var(--darker-gray);
+}
+
+.infobox-copy {
+  margin-left: 8px;
+}

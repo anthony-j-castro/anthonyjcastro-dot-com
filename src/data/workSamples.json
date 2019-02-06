@@ -1,0 +1,349 @@
+[
+  {
+    "employer": "Verve",
+    "date": "January 2018",
+    "name": "Mobile Ad Previewer",
+    "description": [
+      "Every ad the Verve Foundry team builds is displayed on a demo page used internally for preview during development and also final design review. Occasionally, demo pages are given to clients for review. The old demo page design consisted of a fixed black rectangle for a screen and provided limited functionality. I designed and developed a new version which included significant improvements:",
+      [
+        "An overall better design with the Verve Foundry wordmark to reinforce branding",
+        "The ability to switch between different phone sizes to preview the responsiveness of an expandable ad",
+        "Controls to spoof location for creatives with geolocation functionality",
+        "A JavaScript layer that serves as a proxy for in-app and SDK-reliant functionality, such as geolocation requests, MRAID functionality, and reaction to scroll events"
+      ]
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "image",
+            "label": "Verve Demo Page (Original)",
+            "name": "Original Ad Demo",
+            "file": "work-samples/verve/ad-demo-original.png",
+            "width": 1200,
+            "height": 836
+          },
+          {
+            "type": "image",
+            "label": "Verve Demo Page (Updated)",
+            "name": "Updated Ad Demo",
+            "file": "work-samples/verve/ad-demo-updated.png",
+            "width": 1200,
+            "height": 836
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Verve",
+    "date": "August 2017",
+    "name": "Biggby Animated MRAID Banner",
+    "description": [
+      "This MRAID banner ad for Biggby Coffee features a fun and colorful bubble animation that peeks above the original 320x50 placement."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "video",
+            "label": "Biggby Canopy",
+            "name": null,
+            "file": "work-samples/verve/biggby.mp4",
+            "poster": "work-samples/verve/biggby.png",
+            "width": 320,
+            "height": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Verve",
+    "date": "May 2017",
+    "name": "Pepsi 1893 Animated MRAID Banner",
+    "description": [
+      "This MRAID banner ad for Pepsi 1893 features a scripted animation that peeks over the original 320x50 placement. The banner expands to a panel on click that includes a gallery of recipes with corresponding videos."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "video",
+            "label": "Pepsi 1893 Canopy",
+            "name": null,
+            "file": "work-samples/verve/pepsi.mp4",
+            "poster": "work-samples/verve/pepsi.png",
+            "width": 320,
+            "height": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Verve",
+    "date": "January 2018",
+    "name": "Jaguar 360-degree Exterior Experience",
+    "description": [
+      "This ad unit for Jaguar features an expandable panel with a 360-degree experience that respond to a user's gestures. Swipes across the image are detected and switch the image that is being display, simulating the effect of a camera panning around the vehicle."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "video",
+            "label": "Jaguar Simulated 360",
+            "name": null,
+            "file": "work-samples/verve/jaguar-1.mp4",
+            "poster": "work-samples/verve/jaguar-1.png",
+            "width": 320,
+            "height": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Verve",
+    "date": "January 2018",
+    "name": "Jaguar Gyroscopic 360-degree Interior Experience",
+    "description": [
+      "This expandable unit for the Jaguar XE vehicle is a true 360-degree experience that responds to device orientation events from the gyroscope in the user's mobile device. The equirectangular image provided by the client is projected within a sphere using a Verve Foundry-built 360 image and video viewer. In the event the device's orientation cannot be detected, the image can also be manipulated with touch gestures."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "video",
+            "label": "Jaguar 360 Image",
+            "name": null,
+            "file": "work-samples/verve/jaguar-2.mp4",
+            "poster": "work-samples/verve/jaguar-2.png",
+            "width": 320,
+            "height": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Verve",
+    "date": "April 2018",
+    "name": "McCormick Reactive Scrolling MRAID Banner",
+    "description": [
+      "This MRAID banner ad for McCormick extracts features an animation that responds to the user’s scrolling off the app's content. The expanded state features a gallery with some subtle animations that is revealed after detecting a \"shake\" motion through device orientation data."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "video",
+            "label": "McCormick Canopy OnScroll",
+            "name": null,
+            "file": "work-samples/verve/mccormick.mp4",
+            "poster": "work-samples/verve/mccormick.png",
+            "width": 320,
+            "height": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Observer Media",
+    "date": "November 2015 - June 2016",
+    "name": "Observer.com Site Redesign",
+    "description": [
+      "In late 2015, Observer.com began a sitewide redesign to transition itself from existing as an online version of a print publication to being a true online-first media company. I worked with the Brand Creative Director to transform her design specifications into a functional interface for the Observer WordPress VIP site."
+    ],
+    "mediaGroups": [
+      {
+        "name": "Homepage",
+        "media": [
+          {
+            "type": "image",
+            "label": "Observer Homepage (Original)",
+            "name": "Original",
+            "file": "work-samples/observer/observer-homepage-old.png",
+            "width": 1144,
+            "height": 1176
+          },
+          {
+            "type": "image",
+            "label": "Observer Homepage (Updated)",
+            "name": "Updated",
+            "file": "work-samples/observer/observer-homepage-new.png",
+            "width": 1500,
+            "height": 3546
+          }
+        ]
+      },
+      {
+        "name": "Article Page",
+        "media": [
+          {
+            "type": "image",
+            "label": "Observer Article Page (Original)",
+            "name": "Original",
+            "file": "work-samples/observer/observer-article-old.png",
+            "width": 1232,
+            "height": 1064
+          },
+          {
+            "type": "image",
+            "label": "Observer Article Page (Updated)",
+            "name": "Updated",
+            "file": "work-samples/observer/observer-article-new.png",
+            "width": 1233,
+            "height": 1262
+          }
+        ]
+      },
+      {
+        "name": "Article with Slideshow",
+        "media": [
+          {
+            "type": "image",
+            "label": "Observer Slideshow (Original)",
+            "name": "Original",
+            "file": "work-samples/observer/observer-slideshow-old.png",
+            "width": 976,
+            "height": 898
+          },
+          {
+            "type": "image",
+            "label": "Observer Slideshow (Updated)",
+            "name": "Updated",
+            "file": "work-samples/observer/observer-slideshow-new.png",
+            "width": 1209,
+            "height": 1099
+          }
+        ]
+      },
+      {
+        "name": "Updated Slideshow Functionality (Tablet View)",
+        "media": [
+          {
+            "type": "image",
+            "label": "Observer Slideshow (Tablet - 1)",
+            "name": "Slideshow & Article",
+            "file": "work-samples/observer/observer-sponsored-slideshow-1.png",
+            "width": 664,
+            "height": 1074
+          },
+          {
+            "type": "image",
+            "label": "Observer Slideshow (Tablet - 2)",
+            "name": "Full Screen",
+            "file": "work-samples/observer/observer-sponsored-slideshow-2.png",
+            "width": 664,
+            "height": 1074
+          },
+          {
+            "type": "image",
+            "label": "Observer Slideshow (Tablet - 3)",
+            "name": "Full Screen Image List",
+            "file": "work-samples/observer/observer-sponsored-slideshow-3.png",
+            "width": 664,
+            "height": 1074
+          }
+        ]
+      },
+      {
+        "name": "Email Newsletter Page",
+        "media": [
+          {
+            "type": "image",
+            "label": "Observer Newsletters (Original)",
+            "name": "Original",
+            "file": "work-samples/observer/observer-newsletters-old.png",
+            "width": 1086,
+            "height": 1352
+          },
+          {
+            "type": "image",
+            "label": "Observer Newsletters (Updated)",
+            "name": "Updated",
+            "file": "work-samples/observer/observer-newsletters-new.png",
+            "width": 1087,
+            "height": 962
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Observer Media",
+    "date": "Summer 2016",
+    "name": "Observer + Neiman Marcus Co-branded Ad Unit",
+    "description": [
+      "Neiman Marcus collaborated with Observer for a men's fall fashion guide in mid-2016. The Brand Creative Director prepared all assets, and I developed the functioning ad unit. This \"hero\"-sized leaderboard was served through Google DFP and clicked out to products in addition to the sponsored article on the site. All interactions were tracked using Google Analytics."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "image",
+            "label": "Observer + Neiman Marcus Ad Unit",
+            "name": null,
+            "file": "work-samples/observer/observer-neiman-marcus-unit.png",
+            "width": 1940,
+            "height": 830
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "employer": "Time Inc.",
+    "date": "Early 2015",
+    "name": "Real Simple Responsive Subscription Footer",
+    "description": [
+      "Most, if not all, of Time Inc.'s brands had simple ad units on their websites with CTAs that drove to subscription forms. During Real Simple's redesign, a new subscription unit was requested. This unit, which was served through Google DFP, was a full form within a footer placement on the site. I was given a flat reference image to work from that only included the layout and design for desktop. I developed the unit to spec and also made it fully responsive, since the new site was optimized for tablet and mobile devices."
+    ],
+    "mediaGroups": [
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "image",
+            "label": "Real Simple Footer (Desktop)",
+            "name": "Desktop",
+            "file": "work-samples/time-inc/real-simple-footer-desktop.png",
+            "width": 1000,
+            "height": 375
+          }
+        ]
+      },
+      {
+        "name": null,
+        "media": [
+          {
+            "type": "image",
+            "label": "Real Simple Footer (Tablet)",
+            "name": "Tablet",
+            "file": "work-samples/time-inc/real-simple-footer-tablet.png",
+            "width": 632,
+            "height": 375
+          },
+          {
+            "type": "image",
+            "label": "Real Simple Footer (Mobile)",
+            "name": "Mobile",
+            "file": "work-samples/time-inc/real-simple-footer-mobile.png",
+            "width": 320,
+            "height": 375
+          }
+        ]
+      }
+    ]
+  }
+]

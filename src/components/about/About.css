@@ -1,0 +1,14 @@
+#avatar {
+  display: block;
+  max-width: 200px;
+  height: 200px;
+  border: 4px solid var(--lighter-gray);
+  border-radius: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+#about-copy {
+  margin-top: var(--standard-margin);
+}

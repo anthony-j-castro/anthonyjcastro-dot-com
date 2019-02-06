@@ -1,0 +1,25 @@
+#home {
+  margin-top: 32px;
+}
+
+.greeting-container {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.greeting {
+  max-width: 120px;
+  height: auto;
+  fill: var(--nearly-black);
+}
+
+.signature-container {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.signature {
+  max-width: 100px;
+  height: auto;
+  fill: var(--nearly-black);
+}
