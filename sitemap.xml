@@ -4,15 +4,15 @@
     <loc>https://www.anthonyjcastro.com</loc>
   </url>
   <url>
-    <loc>https://www.anthonyjcastro.com/about</loc>
+    <loc>https://www.anthonyjcastro.com/?p=/about</loc>
   </url>
   <url>
-    <loc>https://www.anthonyjcastro.com/work-samples</loc>
+    <loc>https://www.anthonyjcastro.com/?p=/work-samples</loc>
   </url>
   <url>
-    <loc>https://www.anthonyjcastro.com/resume</loc>
+    <loc>https://www.anthonyjcastro.com/?p=/resume</loc>
   </url>
   <url>
-    <loc>https://www.anthonyjcastro.com/contact</loc>
+    <loc>https://www.anthonyjcastro.com/?p=/contact</loc>
   </url>
 </urlset>
