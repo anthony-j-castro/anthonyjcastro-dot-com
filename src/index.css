@@ -12,6 +12,7 @@
   --accent-blue: #80deea;
 
   --light-orange: #ffe8c3;
+  --purple: #6300a2;
 
   --heading-typeface: 'Playfair Display', serif;
   --body-typeface: 'IBM Plex Sans', sans-serif;
@@ -92,6 +93,10 @@ p:last-of-type {
 
 a {
   color: inherit;
+}
+
+a:visited {
+  color: var(--purple);
 }
 
 a:hover {
