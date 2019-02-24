@@ -3,11 +3,10 @@ import config from 'config';
 import React from 'react';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import withAnalytics, { initAnalytics } from 'react-with-analytics';
 import { Helmet } from 'react-helmet';
 
 import App from './App';
-
-import withAnalytics, { initAnalytics } from 'react-with-analytics';
 
 initAnalytics(config.GOOGLE_ANALYTICS_ID, {
   debug: (process.env.NODE_ENV !== 'production'),

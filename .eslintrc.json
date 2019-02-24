@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "extends": ["airbnb"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    },
+    "linkComponents": [
+      "Hyperlink",
+      {"name": "Link", "linkAttribute": "to"},
+      {"name": "OutboundLink", "linkAttribute": "to"}
+    ]
+  },
+  "rules": {
+    "max-len": "off",
+    "indent": ["error", 2],
+    "no-else-return": ["error", {
+      "allowElseIf": true
+    }],
+    "operator-linebreak": "off",
+    "react/jsx-filename-extension": ["error", {
+      "extensions": [".js"]
+    }],
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-one-expression-per-line": "off"
+  }
+}
