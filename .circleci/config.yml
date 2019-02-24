@@ -28,6 +28,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "3e:af:55:2d:fc:b1:7c:09:9d:9d:d1:9e:50:ff:d4:15"
       - deploy:
           name: Deploy to GitHub Pages
           command: |
