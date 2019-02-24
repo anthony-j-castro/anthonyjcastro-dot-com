@@ -44,6 +44,9 @@ workflows:
   build-accept-deploy:
     jobs:
       - setup
+          filters:
+            branches:
+              ignore: gh-pages
       - deploy:
           requires:
             - setup
