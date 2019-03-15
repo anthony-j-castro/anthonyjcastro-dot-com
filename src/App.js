@@ -47,7 +47,7 @@ class App extends Component {
           </ScrollToTop>
         </div>
         <Media query="(max-width: 600px)">
-          { matches => (matches ? (<MobileNavigation />) : null) }
+          { (matches) => (matches ? (<MobileNavigation />) : null) }
         </Media>
       </React.Fragment>
     );

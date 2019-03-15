@@ -23,7 +23,7 @@ const WorkSample = (props) => {
             if (Array.isArray(descriptionItem)) {
               return (
                 <ul key={shortid.generate()}>
-                  {descriptionItem.map(item => (<li key={shortid.generate()}>{item}</li>))}
+                  {descriptionItem.map((item) => (<li key={shortid.generate()}>{item}</li>))}
                 </ul>
               );
             }
@@ -31,7 +31,7 @@ const WorkSample = (props) => {
             return <p key={shortid.generate()}>{descriptionItem}</p>;
           })}
         </div>
-        {workSample.mediaGroups.map(mediaGroup => (
+        {workSample.mediaGroups.map((mediaGroup) => (
           <div className="work-sample-media-group-container" key={shortid.generate()}>
             {mediaGroup.name && (
               <h3>{mediaGroup.name}</h3>

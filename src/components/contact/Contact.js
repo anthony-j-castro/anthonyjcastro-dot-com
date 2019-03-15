@@ -2,10 +2,14 @@ import React from 'react';
 import { OutboundLink } from 'react-ga';
 import { Helmet } from 'react-helmet';
 
+import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
+
+const pageTitle = 'Contact Me | Anthony J. Castro';
+
 const Contact = () => (
   <React.Fragment>
     <Helmet>
-      <title>Contact Me | Anthony J. Castro</title>
+      <title>{pageTitle}</title>
     </Helmet>
     <h1>Contact Me</h1>
     <section id="contact">
@@ -19,4 +23,4 @@ const Contact = () => (
   </React.Fragment>
 );
 
-export default Contact;
+export default withPageTracking(pageTitle)(Contact);

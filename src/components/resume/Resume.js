@@ -4,15 +4,19 @@ import { Helmet } from 'react-helmet';
 
 import shortid from 'shortid';
 
+import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
+
 import resume from 'data/resume';
 
-import InfoBox from '../InfoBox';
+import InfoBox from 'components/InfoBox';
 import ResumeEntry from './ResumeEntry';
+
+const pageTitle = 'Résumé | Anthony J. Castro';
 
 const Resume = () => (
   <React.Fragment>
     <Helmet>
-      <title>Résumé | Anthony J. Castro</title>
+      <title>{pageTitle}</title>
     </Helmet>
     <h1>Résumé</h1>
     <section id="resume">
@@ -31,4 +35,4 @@ const Resume = () => (
   </React.Fragment>
 );
 
-export default Resume;
+export default withPageTracking(pageTitle)(Resume);

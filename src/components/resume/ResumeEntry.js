@@ -26,19 +26,19 @@ const ResumeEntry = (props) => {
     <React.Fragment>
       <div className="resume-entry">
         <h2>{entry.employer}</h2>
-        {entry.positions.map(position => (
+        {entry.positions.map((position) => (
           <div className="resume-entry-position" key={shortid.generate()}><strong>{position.title}</strong> <span className="resume-entry-position-dates">{position.dateStart} - {position.dateEnd}</span></div>
         ))}
         <div className="resume-entry-technologies">
           <span className="resume-entry-technology-heading">Applied Technologies / Skills</span>
           <ul className="resume-entry-technology-list">
-            {entry.technologies.map(technology => (
+            {entry.technologies.map((technology) => (
               <li className="resume-entry-technology" key={shortid.generate()}>{technology}</li>
             ))}
           </ul>
         </div>
         <div>
-          {entry.description.map(paragraph => (
+          {entry.description.map((paragraph) => (
             <p key={shortid.generate()}>{Parser(paragraph, parserOptions)}</p>
           ))}
         </div>

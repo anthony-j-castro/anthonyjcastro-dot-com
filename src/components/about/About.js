@@ -2,14 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
+
 import './About.css';
 
 import avatar from 'images/me.png';
 
+const pageTitle = 'About Me | Anthony J. Castro';
+
 const About = () => (
   <React.Fragment>
     <Helmet>
-      <title>About Me | Anthony J. Castro</title>
+      <title>{pageTitle}</title>
     </Helmet>
     <h1>About Me</h1>
     <section id="about">
@@ -38,4 +42,4 @@ const About = () => (
   </React.Fragment>
 );
 
-export default About;
+export default withPageTracking(pageTitle)(About);

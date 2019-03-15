@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 
+import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
+
 import './NotFound.css';
+
+const pageTitle = '404 Error | Anthony J. Castro';
 
 class NotFound extends Component {
   componentDidMount() {
@@ -17,7 +21,7 @@ class NotFound extends Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>404 Error | Anthony J. Castro</title>
+          <title>{pageTitle}</title>
         </Helmet>
         <h1 className="h1-404">404 Error</h1>
         <section id="404">
@@ -33,4 +37,4 @@ class NotFound extends Component {
   }
 }
 
-export default NotFound;
+export default withPageTracking(pageTitle)(NotFound);

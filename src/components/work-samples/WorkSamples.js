@@ -7,8 +7,11 @@ import shortid from 'shortid';
 
 import workSamples from 'data/workSamples';
 
+import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
 import InfoBox from 'components/InfoBox';
 import WorkSample from './WorkSample';
+
+const pageTitle = 'Work Samples | Anthony J. Castro';
 
 const getNewStateOnUpdate = (props) => {
   const params = queryString.parse(props.location.search);
@@ -18,7 +21,7 @@ const getNewStateOnUpdate = (props) => {
 
   if (params.employer) {
     filters.employer = params.employer;
-    filteredWorkSamples = filteredWorkSamples.filter(workSample => workSample.employer === filters.employer);
+    filteredWorkSamples = filteredWorkSamples.filter((workSample) => workSample.employer === filters.employer);
   }
 
   return {
@@ -46,7 +49,7 @@ class WorkSamples extends Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>Work Samples | Anthony J. Castro</title>
+          <title>{pageTitle}</title>
         </Helmet>
         <h1>Work Samples</h1>
         {(Object.keys(filters).length > 0) && (filters.constructor === Object) && (
@@ -71,4 +74,4 @@ class WorkSamples extends Component {
   }
 }
 
-export default WorkSamples;
+export default withPageTracking(pageTitle)(WorkSamples);

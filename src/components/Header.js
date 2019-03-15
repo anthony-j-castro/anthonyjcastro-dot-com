@@ -14,7 +14,7 @@ const Header = () => (
       <span id="tagline">Web Engineer & UX Enthusiast</span>
     </Link>
     <Media query="(min-width: 601px)">
-      { matches => (matches ? (<Navigation />) : null) }
+      { (matches) => (matches ? (<Navigation />) : null) }
     </Media>
   </header>
 );
