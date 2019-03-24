@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import shortid from 'shortid';
-
 import WorkSampleImage from './WorkSampleImage';
 import WorkSampleVideo from './WorkSampleVideo';
 
@@ -12,50 +10,55 @@ const WorkSample = (props) => {
   const { workSample } = props;
 
   return (
-    <React.Fragment>
-      <div className="work-sample">
-        <span className="work-sample-employer-and-date">
-          {workSample.employer} / {workSample.date}
-        </span>
-        <h2>{workSample.name}</h2>
-        <div>
-          {workSample.description.map((descriptionItem) => {
-            if (Array.isArray(descriptionItem)) {
-              return (
-                <ul key={shortid.generate()}>
-                  {descriptionItem.map((item) => (<li key={shortid.generate()}>{item}</li>))}
-                </ul>
-              );
-            }
+    <div className="work-sample">
+      <span className="work-sample-employer-and-date">
+        {workSample.employer} / {workSample.date}
+      </span>
+      <h2>{workSample.name}</h2>
+      <div>
+        {workSample.description.map((descriptionItem, i) => {
+          if (Array.isArray(descriptionItem)) {
+            return (
+              // eslint-disable-next-line react/no-array-index-key
+              <ul key={i}>
+                {/* eslint-disable-next-line react/no-array-index-key */}
+                {descriptionItem.map((item, j) => (<li key={j}>{item}</li>))}
+              </ul>
+            );
+          }
 
-            return <p key={shortid.generate()}>{descriptionItem}</p>;
-          })}
-        </div>
-        {workSample.mediaGroups.map((mediaGroup) => (
-          <div className="work-sample-media-group-container" key={shortid.generate()}>
-            {mediaGroup.name && (
-              <h3>{mediaGroup.name}</h3>
-            )}
-            <div className="work-sample-media-group">
-              {mediaGroup.media.map((media) => {
-                if (media.type === 'image') {
-                  return <WorkSampleImage key={shortid.generate()} media={media} />;
-                } else if (media.type === 'video') {
-                  return <WorkSampleVideo key={shortid.generate()} media={media} />;
-                }
-
-                return null;
-              })}
-            </div>
-          </div>
-        ))}
+          // eslint-disable-next-line react/no-array-index-key
+          return <p key={i}>{descriptionItem}</p>;
+        })}
       </div>
-    </React.Fragment>
+      {workSample.mediaGroups.map((mediaGroup, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div className="work-sample-media-group-container" key={i}>
+          {mediaGroup.name && (
+            <h3>{mediaGroup.name}</h3>
+          )}
+          <div className="work-sample-media-group">
+            {mediaGroup.media.map((media, j) => {
+              if (media.type === 'image') {
+                // eslint-disable-next-line react/no-array-index-key
+                return <WorkSampleImage key={j} media={media} />;
+              } else if (media.type === 'video') {
+                // eslint-disable-next-line react/no-array-index-key
+                return <WorkSampleVideo key={j} media={media} />;
+              }
+
+              return null;
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
 WorkSample.propTypes = {
   workSample: PropTypes.exact({
+    id: PropTypes.string.isRequired,
     employer: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

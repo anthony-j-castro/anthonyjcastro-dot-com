@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import queryString from 'query-string';
-import shortid from 'shortid';
+import slugify from 'slugify';
 
 import workSamples from 'data/workSamples';
 
@@ -13,11 +13,17 @@ import WorkSample from './WorkSample';
 
 const pageTitle = 'Work Samples | Anthony J. Castro';
 
+const workSamplesWithIds = workSamples.map((workSample) => {
+  const workSampleCopy = { ...workSample };
+  workSampleCopy.id = slugify(`work-sample-${workSampleCopy.employer}-${workSampleCopy.name}`, { lower: true });
+  return workSampleCopy;
+});
+
 const getNewStateOnUpdate = (props) => {
   const params = queryString.parse(props.location.search);
 
   const filters = {};
-  let filteredWorkSamples = workSamples;
+  let filteredWorkSamples = workSamplesWithIds;
 
   if (params.employer) {
     filters.employer = params.employer;
@@ -61,7 +67,7 @@ class WorkSamples extends Component {
         )}
         <section id="work-samples">
           {filteredWorkSamples.map((workSample, i) => (
-            <React.Fragment key={shortid.generate()}>
+            <React.Fragment key={workSample.id}>
               {i > 0 &&
                 <hr />
               }

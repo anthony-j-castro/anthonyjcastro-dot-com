@@ -51,26 +51,24 @@ class WorkSampleVideo extends Component {
     const { media } = this.props;
 
     return (
-      <React.Fragment>
-        <div className="work-sample-media">
-          {media.name &&
-            <h3>{media.name}</h3>
-          }
-          <video
-            className="work-sample-video"
-            src={`${process.env.PUBLIC_URL}/videos/${media.file}`}
-            poster={`${process.env.PUBLIC_URL}/images/${media.poster}`}
-            onPlay={this.handlePlay}
-            onPause={this.handlePause}
-            onEnded={this.handleEnded}
-            style={{ maxWidth: `${media.width}px` }}
-            playsInline
-            controls
-            controlsList="nodownload"
-            muted
-          />
-        </div>
-      </React.Fragment>
+      <div className="work-sample-media">
+        {media.name &&
+          <h3>{media.name}</h3>
+        }
+        <video
+          className="work-sample-video"
+          src={`${process.env.PUBLIC_URL}/videos/${media.file}`}
+          poster={`${process.env.PUBLIC_URL}/images/${media.poster}`}
+          onPlay={this.handlePlay}
+          onPause={this.handlePause}
+          onEnded={this.handleEnded}
+          style={{ maxWidth: `${media.width}px` }}
+          playsInline
+          controls
+          controlsList="nodownload"
+          muted
+        />
+      </div>
     );
   }
 }

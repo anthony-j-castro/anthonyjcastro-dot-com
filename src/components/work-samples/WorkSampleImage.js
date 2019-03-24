@@ -30,21 +30,19 @@ class WorkSampleImage extends Component {
     const { media } = this.props;
 
     return (
-      <React.Fragment>
-        <div className="work-sample-media">
-          {media.name &&
-            <h4>{media.name}</h4>
-          }
-          <Link className="work-sample-image-link" to={`images/${media.file}`} onClick={this.handleClick} target="_blank">
-            <img src={`${process.env.PUBLIC_URL}/images/${media.file}`} alt={media.name} draggable="false" />
+      <div className="work-sample-media">
+        {media.name &&
+          <h4>{media.name}</h4>
+        }
+        <Link className="work-sample-image-link" to={`images/${media.file}`} onClick={this.handleClick} target="_blank">
+          <img src={`${process.env.PUBLIC_URL}/images/${media.file}`} alt={media.name} draggable="false" />
 
-            <div className="work-sample-image-hover">
-              <Octicon icon={Search} size="large" />
-              <span className="work-sample-image-hover-text">View full size image</span>
-            </div>
-          </Link>
-        </div>
-      </React.Fragment>
+          <div className="work-sample-image-hover">
+            <Octicon icon={Search} size="large" />
+            <span className="work-sample-image-hover-text">View full size image</span>
+          </div>
+        </Link>
+      </div>
     );
   }
 }

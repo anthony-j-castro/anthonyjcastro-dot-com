@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Parser from 'html-react-parser';
 import domToReact from 'html-react-parser/lib/dom-to-react';
-import shortid from 'shortid';
+import slugify from 'slugify';
 
 import './ResumeEntry.css';
 
@@ -23,37 +23,38 @@ const ResumeEntry = (props) => {
   const { entry } = props;
 
   return (
-    <React.Fragment>
-      <div className="resume-entry">
-        <h2>{entry.employer}</h2>
-        {entry.positions.map((position) => (
-          <div className="resume-entry-position" key={shortid.generate()}><strong>{position.title}</strong> <span className="resume-entry-position-dates">{position.dateStart} - {position.dateEnd}</span></div>
-        ))}
-        <div className="resume-entry-technologies">
-          <span className="resume-entry-technology-heading">Applied Technologies / Skills</span>
-          <ul className="resume-entry-technology-list">
-            {entry.technologies.map((technology) => (
-              <li className="resume-entry-technology" key={shortid.generate()}>{technology}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          {entry.description.map((paragraph) => (
-            <p key={shortid.generate()}>{Parser(paragraph, parserOptions)}</p>
+    <div className="resume-entry">
+      <h2>{entry.employer}</h2>
+      {entry.positions.map((position, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div className="resume-entry-position" key={i}><strong>{position.title}</strong> <span className="resume-entry-position-dates">{position.dateStart} - {position.dateEnd}</span></div>
+      ))}
+      <div className="resume-entry-technologies">
+        <span className="resume-entry-technology-heading">Applied Technologies / Skills</span>
+        <ul className="resume-entry-technology-list">
+          {entry.technologies.map((technology) => (
+            <li className="resume-entry-technology" key={slugify(technology, { lower: true })}>{technology}</li>
           ))}
-        </div>
-        {entry.hasWorkSamples && (
-          <div className="resume-entry-work-samples-link">
-            <Link to={`/work-samples?employer=${entry.employer}`}>Work samples from {entry.employer}</Link>
-          </div>
-        )}
+        </ul>
       </div>
-    </React.Fragment>
+      <div>
+        {entry.description.map((paragraph, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <p key={i}>{Parser(paragraph, parserOptions)}</p>
+        ))}
+      </div>
+      {entry.hasWorkSamples && (
+        <div className="resume-entry-work-samples-link">
+          <Link to={`/work-samples?employer=${entry.employer}`}>Work samples from {entry.employer}</Link>
+        </div>
+      )}
+    </div>
   );
 };
 
 ResumeEntry.propTypes = {
   entry: PropTypes.exact({
+    id: PropTypes.string.isRequired,
     employer: PropTypes.string.isRequired,
     dateStart: PropTypes.string.isRequired,
     dateEnd: PropTypes.string.isRequired,
