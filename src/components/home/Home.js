@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import ReactSVG from 'react-svg';
 
 import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
 
 import './Home.css';
 
-import greeting from 'images/greeting.svg';
-import signature from 'images/signature.svg';
+import Greeting from 'components/svg/Greeting';
+import Signature from 'components/svg/Signature';
 
 const pageTitle = 'Anthony J. Castro | Web Engineer';
 
@@ -18,7 +17,9 @@ const Home = () => (
       <title>{pageTitle}</title>
     </Helmet>
     <section id="home">
-      <ReactSVG src={greeting} className="greeting-container" svgClassName="greeting" />
+      <div className="greeting-container">
+        <Greeting className="greeting" />
+      </div>
       <p>
         I’m Anthony. I&#39;m a web engineer with a passion for building clean, usable applications and interfaces.
       </p>
@@ -28,7 +29,9 @@ const Home = () => (
       <p>
         Want to get in touch? Find out how to <Link to="/contact">contact me</Link>.
       </p>
-      <ReactSVG src={signature} className="signature-container" svgClassName="signature" />
+      <div className="signature-container">
+        <Signature className="signature" />
+      </div>
     </section>
   </React.Fragment>
 );

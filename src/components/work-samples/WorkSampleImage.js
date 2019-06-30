@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import PropTypes from 'prop-types';
 
-import Octicon, { Search } from '@githubprimer/octicons-react';
+import Octicon, { Search } from '@primer/octicons-react';
 
 import './WorkSampleImage.css';
 

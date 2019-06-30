@@ -3,7 +3,7 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["airbnb"],
+  "extends": ["react-app", "airbnb"],
   "settings": {
     "import/resolver": {
       "node": {
