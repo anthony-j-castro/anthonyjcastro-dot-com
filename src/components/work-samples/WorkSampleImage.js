@@ -1,22 +1,20 @@
+// @flow
 /* eslint-disable react/jsx-no-target-blank */
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
-
-import PropTypes from 'prop-types';
-
 import Octicon, { Search } from '@primer/octicons-react';
+
+import type { Image } from 'types';
 
 import './WorkSampleImage.css';
 
-class WorkSampleImage extends Component {
-  constructor(props) {
-    super(props);
+type Props = {|
+  media: Image,
+|};
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
+class WorkSampleImage extends React.Component<Props> {
+  handleClick = () => {
     const { media } = this.props;
     const { label } = media;
 
@@ -47,16 +45,5 @@ class WorkSampleImage extends Component {
     );
   }
 }
-
-WorkSampleImage.propTypes = {
-  media: PropTypes.exact({
-    type: PropTypes.oneOf(['image']).isRequired,
-    label: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    file: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-  }).isRequired,
-};
 
 export default WorkSampleImage;

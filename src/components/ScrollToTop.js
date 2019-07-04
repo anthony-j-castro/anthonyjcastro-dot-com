@@ -1,10 +1,15 @@
-import { Component } from 'react';
+// @flow
+import * as React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import PropTypes from 'prop-types';
+type Props = {|
+  location: Location,
+  children?: React.Node,
+  scrollCallback: () => void,
+|};
 
-class ScrollToTop extends Component {
-  componentDidUpdate(prevProps) {
+class ScrollToTop extends React.Component<Props> {
+  componentDidUpdate(prevProps: Props) {
     const {
       location,
       scrollCallback,
@@ -16,17 +21,9 @@ class ScrollToTop extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children = null } = this.props;
     return children;
   }
 }
-
-ScrollToTop.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-  children: PropTypes.node.isRequired,
-  scrollCallback: PropTypes.func.isRequired,
-};
 
 export default withRouter(ScrollToTop);

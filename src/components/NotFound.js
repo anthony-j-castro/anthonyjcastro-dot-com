@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
@@ -9,7 +10,7 @@ import './NotFound.css';
 
 const pageTitle = '404 Error | Anthony J. Castro';
 
-class NotFound extends Component {
+class NotFound extends React.Component<{}> {
   componentDidMount() {
     ReactGA.event({
       category: 'Error',

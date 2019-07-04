@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
 import ReactGA from 'react-ga';
 
-import PropTypes from 'prop-types';
+import type { Video } from 'types';
 
 import './WorkSampleVideo.css';
 
-class WorkSampleVideo extends Component {
-  constructor(props) {
-    super(props);
+type Props = {|
+  media: Video,
+|};
 
-    this.handlePlay = this.handlePlay.bind(this);
-    this.handlePause = this.handlePause.bind(this);
-    this.handleEnded = this.handleEnded.bind(this);
-  }
-
-  handlePlay() {
+class WorkSampleVideo extends React.Component<Props> {
+  handlePlay = () => {
     const { media } = this.props;
     const { label } = media;
 
@@ -25,7 +22,7 @@ class WorkSampleVideo extends Component {
     });
   }
 
-  handlePause() {
+  handlePause = () => {
     const { media } = this.props;
     const { label } = media;
 
@@ -36,7 +33,7 @@ class WorkSampleVideo extends Component {
     });
   }
 
-  handleEnded() {
+  handleEnded = () => {
     const { media } = this.props;
     const { label } = media;
 
@@ -72,17 +69,5 @@ class WorkSampleVideo extends Component {
     );
   }
 }
-
-WorkSampleVideo.propTypes = {
-  media: PropTypes.exact({
-    type: PropTypes.oneOf(['video']).isRequired,
-    label: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    file: PropTypes.string.isRequired,
-    poster: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-  }).isRequired,
-};
 
 export default WorkSampleVideo;

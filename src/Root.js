@@ -1,6 +1,7 @@
+// @flow
 import config from 'config';
 
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 

@@ -1,14 +1,18 @@
-import React, { PureComponent } from 'react';
+// @flow
+import * as React from 'react';
 import ReactGA from 'react-ga';
-import PropTypes from 'prop-types';
 
-const withGoogleAnalyticsPageTracking = (pageTitle) => (PageComponent) => {
-  class PageComponentWithAnalytics extends PureComponent {
+type Props = {|
+  location: Location
+|};
+
+const withGoogleAnalyticsPageTracking = (pageTitle?: string) => (PageComponent: React.ComponentType<Props>) => {
+  class PageComponentWithAnalytics extends React.PureComponent<Props> {
     componentDidMount() {
       this.firePageview();
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps: Props) {
       const {
         location: {
           pathname,
@@ -31,7 +35,10 @@ const withGoogleAnalyticsPageTracking = (pageTitle) => (PageComponent) => {
 
       const page = `${pathname}${search}`;
 
-      const fields = {
+      const fields: {
+        page: string,
+        title?: string
+      } = {
         page,
       };
 
@@ -47,13 +54,6 @@ const withGoogleAnalyticsPageTracking = (pageTitle) => (PageComponent) => {
       return <PageComponent {...this.props} />;
     }
   }
-
-  PageComponentWithAnalytics.propTypes = {
-    location: PropTypes.shape({
-      pathname: PropTypes.string.isRequired,
-      search: PropTypes.string.isRequired,
-    }).isRequired,
-  };
 
   return PageComponentWithAnalytics;
 };

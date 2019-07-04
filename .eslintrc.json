@@ -3,7 +3,8 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["react-app", "airbnb"],
+  "extends": ["react-app", "airbnb", "plugin:flowtype/recommended"],
+  "plugins": ["flowtype"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -28,6 +29,7 @@
       "extensions": [".js"]
     }],
     "react/jsx-no-target-blank": "error",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": "off"
   }
 }

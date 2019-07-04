@@ -1,13 +1,13 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
-
-import './Home.css';
-
 import Greeting from 'components/svg/Greeting';
 import Signature from 'components/svg/Signature';
+
+import './Home.css';
 
 const pageTitle = 'Anthony J. Castro | Web Engineer';
 

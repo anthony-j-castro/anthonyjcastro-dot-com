@@ -1,5 +1,6 @@
+// @flow
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
+import * as React from 'react';
 import { OutboundLink } from 'react-ga';
 import { Helmet } from 'react-helmet';
 

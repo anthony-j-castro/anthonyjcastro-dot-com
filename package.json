@@ -9,12 +9,12 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build && cp CNAME build/CNAME && mkdir -p build/.circleci && cp -a .circleci/. build/.circleci/.",
     "deploy": "gh-pages -d build --dotfiles",
+    "flow": "flow",
     "lint": "eslint \"./src/**/*.js\""
   },
   "dependencies": {
     "@primer/octicons-react": "^9.1.1",
     "html-react-parser": "^0.8.0",
-    "prop-types": "^15.6.2",
     "query-string": "^6.8.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -27,15 +27,17 @@
   },
   "devDependencies": {
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-flowtype": "^3.11.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.2",
     "eslint-plugin-react": "^7.14.2",
+    "flow-bin": "^0.102.0",
     "gh-pages": "^2.0.1",
     "husky": "^2.7.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint && npm run flow"
     }
   },
   "browserslist": {

@@ -1,11 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
+// @flow
+import * as React from 'react';
 import Octicon, { Info } from '@primer/octicons-react';
 
 import './InfoBox.css';
 
-const InfoBox = (props) => {
+type Props = {|
+  children: React.Node,
+|};
+
+const InfoBox = (props: Props) => {
   const { children } = props;
 
   return (
@@ -16,10 +19,6 @@ const InfoBox = (props) => {
       </div>
     </div>
   );
-};
-
-InfoBox.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default InfoBox;

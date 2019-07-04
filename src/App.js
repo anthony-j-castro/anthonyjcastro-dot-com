@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
 import Media from 'react-media';
 
 import { Switch, Route } from 'react-router-dom';
@@ -15,17 +16,17 @@ import NotFound from 'components/NotFound';
 
 import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+class App extends React.Component<{}> {
+  content: ?React.ElementRef<'div'>;
 
-    this.contentRef = React.createRef();
+  contentRef = (ref: ?React.ElementRef<'div'>) => {
+    this.content = ref;
+  };
 
-    this.scrollToTopOfContent = this.scrollToTopOfContent.bind(this);
-  }
-
-  scrollToTopOfContent() {
-    this.contentRef.current.scrollTop = 0;
+  scrollToTopOfContent = () => {
+    if (this.content) {
+      this.content.scrollTop = 0;
+    }
   }
 
   render() {

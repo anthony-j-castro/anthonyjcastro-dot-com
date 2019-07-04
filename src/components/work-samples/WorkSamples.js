@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-
 import queryString from 'query-string';
 import slugify from 'slugify';
+
+import type { WorkSample as TWorkSample } from 'types';
 
 import workSamples from 'data/workSamples';
 
@@ -13,71 +15,53 @@ import WorkSample from './WorkSample';
 
 const pageTitle = 'Work Samples | Anthony J. Castro';
 
-const workSamplesWithIds = workSamples.map((workSample) => {
+type Props = {|
+  location: Location,
+|};
+
+const workSamplesWithIds: TWorkSample[] = workSamples.map((workSample: TWorkSample) => {
   const workSampleCopy = { ...workSample };
   workSampleCopy.id = slugify(`work-sample-${workSampleCopy.employer}-${workSampleCopy.name}`, { lower: true });
   return workSampleCopy;
 });
 
-const getNewStateOnUpdate = (props) => {
-  const params = queryString.parse(props.location.search);
-
-  const filters = {};
+const WorkSamples = (props: Props) => {
+  const { location } = props;
+  const params = queryString.parse(location.search);
   let filteredWorkSamples = workSamplesWithIds;
 
+  let filter;
+
   if (params.employer) {
-    filters.employer = params.employer;
-    filteredWorkSamples = filteredWorkSamples.filter((workSample) => workSample.employer === filters.employer);
+    filter = params.employer;
+    filteredWorkSamples = filteredWorkSamples.filter((workSample) => workSample.employer === filter);
   }
 
-  return {
-    filteredWorkSamples,
-    filters,
-  };
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+      <h1>Work Samples</h1>
+      {filter !== undefined && (
+        <InfoBox>
+          You are viewing a filtered subset of my work samples.
+          <br />
+          <Link to="/work-samples">View all work samples</Link> instead.
+        </InfoBox>
+      )}
+      <section id="work-samples">
+        {filteredWorkSamples.map((workSample, i) => (
+          <React.Fragment key={workSample.id}>
+            {i > 0 &&
+              <hr />
+            }
+            <WorkSample workSample={workSample} />
+          </React.Fragment>
+        ))}
+      </section>
+    </React.Fragment>
+  );
 };
-
-class WorkSamples extends Component {
-  constructor(props) {
-    super(props);
-    this.state = getNewStateOnUpdate(props);
-  }
-
-  componentWillReceiveProps(props) {
-    this.setState(getNewStateOnUpdate(props));
-  }
-
-  render() {
-    const {
-      filteredWorkSamples,
-      filters,
-    } = this.state;
-
-    return (
-      <React.Fragment>
-        <Helmet>
-          <title>{pageTitle}</title>
-        </Helmet>
-        <h1>Work Samples</h1>
-        {(Object.keys(filters).length > 0) && (filters.constructor === Object) && (
-          <InfoBox>
-            You are viewing a filtered subset of my work samples.
-            <br />
-            <Link to="/work-samples">View all work samples</Link> instead.
-          </InfoBox>
-        )}
-        <section id="work-samples">
-          {filteredWorkSamples.map((workSample, i) => (
-            <React.Fragment key={workSample.id}>
-              {i > 0 &&
-                <hr />
-              }
-              <WorkSample workSample={workSample} />
-            </React.Fragment>
-          ))}
-        </section>
-      </React.Fragment>
-    );
-  }
-}
 
 export default withPageTracking(pageTitle)(WorkSamples);

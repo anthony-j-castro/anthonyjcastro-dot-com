@@ -1,13 +1,18 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { OutboundLink } from 'react-ga';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
 import Parser from 'html-react-parser';
 import domToReact from 'html-react-parser/lib/dom-to-react';
 import slugify from 'slugify';
 
+import type { ResumeEntry as TResumeEntry, Position } from 'types';
+
 import './ResumeEntry.css';
+
+type Props = {|
+  entry: TResumeEntry,
+|};
 
 const parserOptions = {
   replace: (domNode) => {
@@ -19,26 +24,26 @@ const parserOptions = {
   },
 };
 
-const ResumeEntry = (props) => {
+const ResumeEntry = (props: Props) => {
   const { entry } = props;
 
   return (
     <div className="resume-entry">
       <h2>{entry.employer}</h2>
-      {entry.positions.map((position, i) => (
+      {entry.positions.map((position: Position, i) => (
         // eslint-disable-next-line react/no-array-index-key
         <div className="resume-entry-position" key={i}><strong>{position.title}</strong> <span className="resume-entry-position-dates">{position.dateStart} - {position.dateEnd}</span></div>
       ))}
       <div className="resume-entry-technologies">
         <span className="resume-entry-technology-heading">Applied Technologies / Skills</span>
         <ul className="resume-entry-technology-list">
-          {entry.technologies.map((technology) => (
+          {entry.technologies.map((technology: string) => (
             <li className="resume-entry-technology" key={slugify(technology, { lower: true })}>{technology}</li>
           ))}
         </ul>
       </div>
       <div>
-        {entry.description.map((paragraph, i) => (
+        {entry.description.map((paragraph: string, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <p key={i}>{Parser(paragraph, parserOptions)}</p>
         ))}
@@ -50,23 +55,6 @@ const ResumeEntry = (props) => {
       )}
     </div>
   );
-};
-
-ResumeEntry.propTypes = {
-  entry: PropTypes.exact({
-    id: PropTypes.string.isRequired,
-    employer: PropTypes.string.isRequired,
-    dateStart: PropTypes.string.isRequired,
-    dateEnd: PropTypes.string.isRequired,
-    positions: PropTypes.arrayOf(PropTypes.exact({
-      title: PropTypes.string.isRequired,
-      dateStart: PropTypes.string.isRequired,
-      dateEnd: PropTypes.string.isRequired,
-    })),
-    description: PropTypes.arrayOf(PropTypes.string).isRequired,
-    technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    hasWorkSamples: PropTypes.bool.isRequired,
-  }).isRequired,
 };
 
 export default ResumeEntry;

@@ -1,5 +1,5 @@
-import React from 'react';
-
+// @flow
+import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => (

@@ -1,6 +1,6 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import Media from 'react-media';
-
 import { Link } from 'react-router-dom';
 
 import Navigation from 'components/Navigation';

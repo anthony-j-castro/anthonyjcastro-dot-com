@@ -1,19 +1,20 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { OutboundLink } from 'react-ga';
 import { Helmet } from 'react-helmet';
-
 import slugify from 'slugify';
 
-import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
+import type { ResumeEntry as TResumeEntry } from 'types';
 
 import resume from 'data/resume';
 
+import withPageTracking from 'components/withGoogleAnalyticsPageTracking';
 import InfoBox from 'components/InfoBox';
 import ResumeEntry from './ResumeEntry';
 
 const pageTitle = 'Résumé | Anthony J. Castro';
 
-const resumeWithIds = resume.map((entry) => {
+const resumeWithIds: TResumeEntry[] = resume.map((entry: TResumeEntry) => {
   const entryCopy = { ...entry };
   entryCopy.id = slugify(`resume-entry-${entryCopy.employer}`, { lower: true });
   return entryCopy;
@@ -29,7 +30,7 @@ const Resume = () => (
       <InfoBox>
         Looking for a printable one-sheet version? Send me an email at <OutboundLink eventLabel="Email for Resume" to="mailto:hello@anthonyjcastro.com" target="_blank" rel="noopener noreferrer">hello@anthonyjcastro.com</OutboundLink>.
       </InfoBox>
-      {resumeWithIds.map((entry, i) => (
+      {resumeWithIds.map((entry: TResumeEntry, i) => (
         <React.Fragment key={entry.id}>
           {i > 0 &&
             <hr />

@@ -1,3 +1,4 @@
+// @flow
 const development = {
   GOOGLE_ANALYTICS_ID: 'UA-133883631-2',
 };
