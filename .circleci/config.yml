@@ -29,6 +29,13 @@ jobs:
       - attach_workspace:
           at: .
       - run: npm run lint
+  flow:
+    <<: *default_settings
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: npm run flow
   deploy:
     <<: *default_settings
     steps:
@@ -57,9 +64,13 @@ workflows:
       - lint:
           requires:
             - setup
+      - flow:
+          requires:
+            - setup
       - deploy:
           requires:
             - lint
+            - flow
           filters:
             branches:
               only: master
