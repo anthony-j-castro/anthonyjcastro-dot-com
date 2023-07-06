@@ -1,5 +1,3 @@
-const path = require("node:path");
-
 module.exports = {
   env: {
     node: true,
@@ -23,6 +21,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-unused-vars": "warn",
     "import/newline-after-import": "error",
+    "import/no-named-as-default": "off",
     "import/no-relative-packages": "error",
     "import/order": [
       "error",
