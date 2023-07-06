@@ -57,8 +57,7 @@ const App = () => {
       <CopyColumn>
         <GreetingParagraph>Hi! I’m Anthony.</GreetingParagraph>
         <Paragraph>
-          I’m based in New York, NY, and I’m currently an engineering manager at
-          CircleCI.
+          I’m an engineering manager at CircleCI living in New York, NY.
         </Paragraph>
         <Paragraph>
           Before becoming an EM, I spent a decade as a software engineer working
