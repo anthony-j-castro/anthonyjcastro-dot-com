@@ -4,7 +4,13 @@ import { Image } from "./styled";
 
 const CONSTRAIN_LIMIT_IN_DEGREES = 2;
 const TILT_DIVISOR = 20;
-const HOVER_SCALE = 1.1;
+const HOVER_SCALE = 1.075;
+const DEFAULT_TRANSFORM_STYLES = {
+  rotateX: 0,
+  rotateY: 0,
+  scale: 1,
+};
+const TOUCHSCREEN_MEDIA_QUERY = window.matchMedia("(pointer: coarse)");
 
 function constrain(n: number) {
   return Math.min(
@@ -20,14 +26,39 @@ interface Props {
 const Portrait = ({ className }: Props) => {
   const portraitRef = useRef<HTMLImageElement>(null);
 
-  const [transformStyles, setTransformStyles] = useState({
-    rotateX: 0,
-    rotateY: 0,
-    scale: 1,
+  const [transformStyles, setTransformStyles] = useState(
+    DEFAULT_TRANSFORM_STYLES,
+  );
+
+  // This effect is mostly to handle switching between desktop and mobile
+  // during development. It resets the portrait transform styles if we switch
+  // to a touchscreen device.
+  useEffect(() => {
+    const handleTouchscreenMediaQueryChange = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        setTransformStyles(DEFAULT_TRANSFORM_STYLES);
+      }
+    };
+
+    TOUCHSCREEN_MEDIA_QUERY.addEventListener(
+      "change",
+      handleTouchscreenMediaQueryChange,
+    );
+
+    return () => {
+      TOUCHSCREEN_MEDIA_QUERY.removeEventListener(
+        "change",
+        handleTouchscreenMediaQueryChange,
+      );
+    };
   });
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
+      if (TOUCHSCREEN_MEDIA_QUERY.matches) {
+        return;
+      }
+
       const portraitClientRect = portraitRef.current?.getBoundingClientRect();
 
       if (portraitClientRect === undefined) {
