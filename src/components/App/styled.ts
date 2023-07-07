@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 const MOBILE_MAX_WIDTH = "600px";
-const MAIN_MARGIN = "32px";
 
-export const Main = styled.main`
-  width: calc(100vw - (2 * ${MAIN_MARGIN}));
-  height: calc(100vh - (2 * ${MAIN_MARGIN}));
+export const Container = styled.div`
+  min-width: 100%;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: ${MAIN_MARGIN};
+  padding: 32px;
+`;
+
+export const Main = styled.main`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: ${MOBILE_MAX_WIDTH}) {
     flex-direction: column;
@@ -21,6 +28,10 @@ export const SocialLinks = styled.div`
   margin-top: 32px;
 `;
 
+export const Separator = styled.span`
+  margin: 0 8px;
+`;
+
 export const CopyColumn = styled.div`
   flex: 1;
   min-width: min(500px, 50vw);
@@ -30,6 +41,8 @@ export const CopyColumn = styled.div`
   @media (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 32px;
     margin-left: 0;
+    width: 100%;
+    max-width: 400px;
   }
 `;
 

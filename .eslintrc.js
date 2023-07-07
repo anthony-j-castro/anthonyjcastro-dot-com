@@ -30,7 +30,7 @@ module.exports = {
         groups: ["builtin", "external", "internal", "sibling", "index"],
       },
     ],
-    //"no-console": "error",
+    "no-console": "error",
     "prettier/prettier": "error",
     "react/jsx-no-useless-fragment": "error",
     "sort-imports": ["error", { ignoreDeclarationSort: true }],
