@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.anthonyjcastro.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.anthonyjcastro.com/?p=/about</loc>
-  </url>
-  <url>
-    <loc>https://www.anthonyjcastro.com/?p=/work-samples</loc>
-  </url>
-  <url>
-    <loc>https://www.anthonyjcastro.com/?p=/resume</loc>
-  </url>
-  <url>
-    <loc>https://www.anthonyjcastro.com/?p=/contact</loc>
   </url>
 </urlset>
