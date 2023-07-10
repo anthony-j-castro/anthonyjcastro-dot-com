@@ -3,7 +3,12 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
+      interval: "daily"
+    reviewers:
+      - "anthony-j-castro"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
       interval: "weekly"
-      day: "wednesday"
     reviewers:
       - "anthony-j-castro"
