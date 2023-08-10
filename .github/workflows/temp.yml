@@ -3,11 +3,13 @@ name: Temp
 on:
   workflow_run:
     workflows: [Test branch]
+    branches-ignore:
+      - main
     types:
       - completed
 
 jobs:
-  test:
+  test2:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
