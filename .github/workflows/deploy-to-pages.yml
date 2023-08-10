@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ready
-        run: exit 1
+        run: echo "Ready to deploy"
 
   fail:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
