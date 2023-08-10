@@ -1,9 +1,7 @@
 name: Test branch
 
 on:
-  push:
-    branches-ignore:
-      - main
+  push
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
