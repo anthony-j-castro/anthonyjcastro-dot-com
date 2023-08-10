@@ -9,6 +9,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "clean": "rm -rf build/*",
+    "build:cypress": "REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID=G-GES4DQN2RP react-scripts build",
+    "serve": "serve -s build",
     "cy:run": "cypress run"
   },
   "dependencies": {
@@ -31,6 +34,7 @@
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-react": "7.33.1",
     "prettier": "3.0.1",
+    "serve": "14.2.0",
     "typescript": "5.1.6"
   },
   "overrides": {
