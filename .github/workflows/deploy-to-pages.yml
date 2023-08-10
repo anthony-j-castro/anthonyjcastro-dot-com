@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ready
-        run: echo "Ready to deploy"
+        run: exit 1
 
   build:
     runs-on: ubuntu-latest
