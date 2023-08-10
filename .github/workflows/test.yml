@@ -26,3 +26,10 @@ jobs:
         run: npm run typecheck
       - name: Lint
         run: npm run lint
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          build: npm run build:cy
+          start: npm run serve:cy
+          wait-on: "http://localhost:3000"

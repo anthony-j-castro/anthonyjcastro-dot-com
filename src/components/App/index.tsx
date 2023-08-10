@@ -47,7 +47,9 @@ const App = () => {
           </SocialLinks>
         </div>
         <CopyColumn>
-          <GreetingParagraph>Hi! I’m Anthony.</GreetingParagraph>
+          <GreetingParagraph data-cy="greeting">
+            Hi! I’m Anthony.
+          </GreetingParagraph>
           <Paragraph>
             I’m an engineering manager at CircleCI living in New York, NY.
           </Paragraph>
