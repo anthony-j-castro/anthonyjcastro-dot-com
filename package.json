@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf build/*",
-    "build:cy": "REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID=G-GES4DQN2RP react-scripts build",
+    "build:cy": "REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID= react-scripts build",
     "serve:cy": "serve -s build",
     "cy:run": "cypress run"
   },
