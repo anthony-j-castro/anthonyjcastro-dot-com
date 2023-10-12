@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -13,7 +12,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "~/*": ["*"]
+      "~/*": ["./*"]
     },
     "resolveJsonModule": true,
     "isolatedModules": true,
