@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-import analytics from "~/analytics";
-import Link from "~/components/Link";
-import Portrait from "~/components/Portrait";
 import {
   Container,
   CopyColumn,
@@ -11,6 +8,9 @@ import {
   Separator,
   SocialLinks,
 } from "./styled";
+import analytics from "../../analytics";
+import Link from "../Link";
+import Portrait from "../Portrait";
 
 const App = () => {
   useEffect(() => {
