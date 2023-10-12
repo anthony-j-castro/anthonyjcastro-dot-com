@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import analytics from "~/analytics";
+import Link from "~/components/Link";
+import Portrait from "~/components/Portrait";
 import {
   Container,
   CopyColumn,
@@ -8,9 +11,6 @@ import {
   Separator,
   SocialLinks,
 } from "./styled";
-import analytics from "../../analytics";
-import Link from "../Link";
-import Portrait from "../Portrait";
 
 const App = () => {
   useEffect(() => {
@@ -28,8 +28,8 @@ const App = () => {
               onClick={() => {
                 analytics.track("clicked_linkedin_link");
               }}
-              target="_blank"
               rel="noreferrer"
+              target="_blank"
             >
               LinkedIn
             </Link>
@@ -39,8 +39,8 @@ const App = () => {
               onClick={() => {
                 analytics.track("clicked_github_link");
               }}
-              target="_blank"
               rel="noreferrer"
+              target="_blank"
             >
               GitHub
             </Link>
@@ -66,8 +66,8 @@ const App = () => {
               onClick={() => {
                 analytics.track("clicked_email_link");
               }}
-              target="_blank"
               rel="noreferrer"
+              target="_blank"
             >
               hello@anthonyjcastro.com
             </Link>
