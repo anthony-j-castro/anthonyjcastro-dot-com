@@ -28,8 +28,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          env: CI=false
           build: npm run build:cy
           start: npm run serve:cy
           wait-on: "http://localhost:3000"
-        env:
-          SKIP_PREFLIGHT_CHECK: true
