@@ -31,3 +31,5 @@ jobs:
           build: npm run build:cy
           start: npm run serve:cy
           wait-on: "http://localhost:3000"
+        env:
+          CI: false
