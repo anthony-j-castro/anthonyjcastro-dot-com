@@ -8,6 +8,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint .",
+    "lint:ci": "eslint . --quiet",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf build/*",
     "build:cy": "REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID= react-scripts build",
