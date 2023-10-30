@@ -23,7 +23,7 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
       - name: Lint
-        run: npm run lint
+        run: npm run lint:ci
       - name: Build for Cypress
         run: npm run build:cy
         env: 
