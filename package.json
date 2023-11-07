@@ -27,7 +27,7 @@
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:1.0.1",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@types/react": "18.2.34",
+    "@types/react": "18.2.36",
     "@types/react-dom": "18.2.14",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.9.1",
