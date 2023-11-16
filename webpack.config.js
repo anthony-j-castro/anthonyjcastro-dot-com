@@ -3,7 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
+module.exports = (env) => ({
   entry: "./src/index.tsx",
   output: {
     filename: "main.js",
@@ -35,7 +35,7 @@ module.exports = {
     extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
   },
   plugins: [
-    new Dotenv(),
+    new Dotenv({ path: `.env.${env.environment}` }),
     new CopyPlugin({
       patterns: [
         {
@@ -59,4 +59,4 @@ module.exports = {
       directory: path.join(__dirname, "build"),
     },
   },
-};
+});
