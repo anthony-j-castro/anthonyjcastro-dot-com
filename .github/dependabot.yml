@@ -5,10 +5,10 @@ updates:
     schedule:
       interval: "daily"
     groups:    
-      "@babel":
+      babel:
         patterns:
           - "@babel/*"
-      "@typescript-eslint":
+      typescript-eslint:
         patterns:
           - "@typescript-eslint/*"
   - package-ecosystem: "github-actions"
