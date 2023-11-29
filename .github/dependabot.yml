@@ -4,7 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    groups:
+    groups:    
+      "@babel":
+        patterns:
+          - "@babel/*"
       "@typescript-eslint":
         patterns:
           - "@typescript-eslint/*"
