@@ -26,7 +26,7 @@
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:1.1.0",
     "@babel/core": "7.23.5",
     "@babel/preset-env": "7.23.5",
-    "@types/react": "18.2.39",
+    "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
