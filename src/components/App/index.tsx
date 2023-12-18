@@ -24,7 +24,7 @@ const App = () => {
           <Portrait />
           <SocialLinks>
             <Link
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/anthonyjcastro/"
               onClick={() => {
                 analytics.track("clicked_linkedin_link");
               }}
