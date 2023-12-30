@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:1.1.0",
-    "@babel/core": "7.23.6",
-    "@babel/preset-env": "7.23.6",
+    "@babel/core": "7.23.7",
+    "@babel/preset-env": "7.23.7",
     "@types/react": "18.2.46",
     "@types/react-dom": "18.2.18",
     "@typescript-eslint/eslint-plugin": "6.16.0",
