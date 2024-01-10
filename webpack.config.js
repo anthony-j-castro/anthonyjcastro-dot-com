@@ -42,7 +42,7 @@ module.exports = (env) => ({
           from: path.resolve(__dirname, "public"),
           to: path.resolve(__dirname, "build"),
           globOptions: {
-            ignore: path.resolve(__dirname, "public", "index.html"),
+            ignore: [path.resolve(__dirname, "public", "index.html")],
           },
         },
       ],
