@@ -8,6 +8,8 @@
     "build": "webpack --env environment=production  --mode production",
     "lint": "eslint .",
     "lint:ci": "eslint . --quiet",
+    "prettier": "prettier . --write",
+    "prettier:ci": "prettier . --check",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf build/*",
     "build:cy": "webpack --env environment=cypress --mode production",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:1.1.0",
+    "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#semver:1.0.0",
     "@babel/core": "7.23.7",
     "@babel/preset-env": "7.23.8",
     "@types/react": "18.2.48",
@@ -53,7 +56,11 @@
     "webpack-dev-server": "4.15.1"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
