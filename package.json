@@ -8,6 +8,8 @@
     "build": "webpack --env environment=production  --mode production",
     "lint": "eslint .",
     "lint:ci": "eslint . --quiet",
+    "prettier": "prettier . --write",
+    "prettier:ci": "prettier . --check",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf build/*",
     "build:cy": "webpack --env environment=cypress --mode production",

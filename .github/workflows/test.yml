@@ -1,10 +1,10 @@
 name: Test branch
 
-on:
-  push
+on: push
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group:
+    ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -22,11 +22,13 @@ jobs:
         run: npm ci
       - name: Typecheck
         run: npm run typecheck
+      - name: Check for uncommitted Prettier changes
+        run: npm run prettier:ci
       - name: Lint
         run: npm run lint:ci
       - name: Build for Cypress
         run: npm run build:cy
-        env: 
+        env:
           CI: false
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
@@ -48,4 +50,3 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore
-
