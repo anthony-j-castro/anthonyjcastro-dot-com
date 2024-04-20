@@ -99,6 +99,7 @@ const Portrait = ({ className }: Props) => {
   return (
     <Image
       className={className}
+      draggable={false}
       ref={portraitRef}
       src={portraitSrc}
       style={{
