@@ -29,7 +29,7 @@
     "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#semver:1.0.0",
     "@babel/core": "7.25.2",
     "@babel/preset-env": "7.25.4",
-    "@types/react": "18.3.4",
+    "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",
     "babel-loader": "9.1.3",
     "copy-webpack-plugin": "12.0.2",
