@@ -7,7 +7,7 @@
     "start": "webpack serve --env environment=development --mode development",
     "build": "webpack --env environment=production  --mode production",
     "lint": "npx eslint",
-    "lint:ci": "npx eslint--quiet",
+    "lint:ci": "npx eslint --quiet",
     "prettier": "prettier . --write",
     "prettier:ci": "prettier . --check",
     "typecheck": "tsc --noEmit",
