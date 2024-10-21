@@ -12,12 +12,11 @@ const DEFAULT_TRANSFORM_STYLES = {
 };
 const TOUCHSCREEN_MEDIA_QUERY = window.matchMedia("(pointer: coarse)");
 
-function constrain(n: number) {
-  return Math.min(
+const constrain = (n: number) =>
+  Math.min(
     Math.max(n, -CONSTRAIN_LIMIT_IN_DEGREES),
     CONSTRAIN_LIMIT_IN_DEGREES,
   );
-}
 
 interface Props {
   className?: string;
