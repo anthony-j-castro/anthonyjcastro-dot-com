@@ -3,7 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = (env) => ({
+const webpackConfig = (env) => ({
   entry: "./src/index.tsx",
   output: {
     filename: "main.js",
@@ -60,3 +60,4 @@ module.exports = (env) => ({
     },
   },
 });
+module.exports = webpackConfig;
