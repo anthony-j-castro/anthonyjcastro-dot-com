@@ -20,8 +20,8 @@
     "@analytics/google-analytics": "1.0.7",
     "analytics": "0.8.14",
     "modern-normalize": "3.0.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "styled-components": "6.1.13"
   },
   "devDependencies": {
@@ -29,8 +29,8 @@
     "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#semver:1.0.0",
     "@babel/core": "7.26.0",
     "@babel/preset-env": "7.26.0",
-    "@types/react": "18.3.13",
-    "@types/react-dom": "18.3.1",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
     "babel-loader": "9.2.1",
     "copy-webpack-plugin": "12.0.2",
     "css-loader": "7.1.2",
