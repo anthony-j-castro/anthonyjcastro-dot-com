@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@analytics/google-analytics": "1.0.7",
-    "analytics": "0.8.14",
+    "analytics": "0.8.16",
     "modern-normalize": "3.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
