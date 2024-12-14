@@ -17,7 +17,7 @@
     "cy:run": "cypress run"
   },
   "dependencies": {
-    "@analytics/google-analytics": "1.0.7",
+    "@analytics/google-analytics": "1.1.0",
     "analytics": "0.8.16",
     "modern-normalize": "3.0.1",
     "react": "19.0.0",
