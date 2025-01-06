@@ -22,7 +22,7 @@
     "modern-normalize": "3.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "styled-components": "6.1.13"
+    "styled-components": "6.1.14"
   },
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:2.1.1",
