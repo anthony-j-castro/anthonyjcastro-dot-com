@@ -47,10 +47,7 @@ const App = () => {
           </SocialLinks>
         </div>
         <CopyColumn>
-          <GreetingParagraph
-            data-cy="greeting"
-            data-testid="greeting"
-          >
+          <GreetingParagraph data-testid="greeting">
             Hi! I’m Anthony.
           </GreetingParagraph>
           <Paragraph>
