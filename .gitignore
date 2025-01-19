@@ -9,9 +9,6 @@
 # production
 /build
 
-# Cypress
-cypress/screenshots
-cypress/videos
 
 # misc
 .DS_Store
