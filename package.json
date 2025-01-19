@@ -5,6 +5,7 @@
   "homepage": "https://www.anthonyjcastro.com/",
   "scripts": {
     "start": "webpack serve --env environment=development --mode development",
+    "start:ci": "webpack serve --no-open --env environment=development --mode development",
     "build": "webpack --env environment=production  --mode production",
     "lint": "npx eslint",
     "lint:ci": "npx eslint --quiet",
@@ -29,6 +30,8 @@
     "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#semver:1.0.0",
     "@babel/core": "7.26.0",
     "@babel/preset-env": "7.26.0",
+    "@playwright/test": "1.49.1",
+    "@types/node": "22.10.7",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "babel-loader": "9.2.1",
