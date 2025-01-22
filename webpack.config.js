@@ -2,6 +2,7 @@ const path = require("node:path");
 const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const webpackConfig = (env) => ({
   entry: "./src/index.tsx",
@@ -33,6 +34,11 @@ const webpackConfig = (env) => ({
   },
   resolve: {
     extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
+    plugins: [
+      new TsconfigPathsPlugin({
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      }),
+    ],
   },
   plugins: [
     new Dotenv({ path: `.env.${env.environment}` }),
