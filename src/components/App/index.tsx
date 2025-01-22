@@ -51,7 +51,33 @@ const App = () => {
             Hi! I’m Anthony.
           </GreetingParagraph>
           <Paragraph>
-            I’m an engineering manager at CircleCI living in New York, NY.
+            I’m an engineering manager at CircleCI living in New York, NY. I
+            also co-host{" "}
+            <em>Beyond the Build: Code, Culture, and Everything Between</em>, a
+            podcast dedicated to helping engineering managers and leaders build
+            great teams. You can give it a listen on{" "}
+            <Link
+              href="https://podcasts.apple.com/us/podcast/beyond-the-build-code-culture-and-everything-between/id1779379455?i=1000676717231"
+              onClick={() => {
+                analytics.track("clicked_apple_podcasts_link");
+              }}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Apple Podcasts
+            </Link>{" "}
+            or{" "}
+            <Link
+              href="https://open.spotify.com/show/0ldZVVVIEBljKAKrYRHIB3?si=03db250affce4195"
+              onClick={() => {
+                analytics.track("clicked_spotify_link");
+              }}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Spotify
+            </Link>
+            .
           </Paragraph>
           <Paragraph>
             Before becoming an EM, I spent a decade as a software engineer
@@ -60,7 +86,7 @@ const App = () => {
             including Abstract, Verve, Observer Media, and Time Inc.
           </Paragraph>
           <Paragraph>
-            Send me a message at{" "}
+            Looking to get in touch with me? Send me a message at{" "}
             <Link
               href="mailto:hello@anthonyjcastro.com"
               onClick={() => {
