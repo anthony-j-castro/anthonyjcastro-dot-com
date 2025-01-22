@@ -22,7 +22,8 @@
     "modern-normalize": "3.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "styled-components": "6.1.14"
+    "styled-components": "6.1.14",
+    "use-analytics": "1.1.0"
   },
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:2.1.1",
@@ -33,6 +34,7 @@
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
+    "@types/use-analytics": "0.0.3",
     "babel-loader": "9.2.1",
     "copy-webpack-plugin": "12.0.2",
     "css-loader": "7.1.2",
@@ -45,6 +47,7 @@
     "serve": "14.2.4",
     "style-loader": "4.0.0",
     "ts-loader": "9.5.2",
+    "tsconfig-paths-webpack-plugin": "4.2.0",
     "typescript": "5.7.3",
     "webpack": "5.97.1",
     "webpack-cli": "6.0.1",

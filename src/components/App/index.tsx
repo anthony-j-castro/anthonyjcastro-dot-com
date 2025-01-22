@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import { useAnalytics } from "use-analytics";
+import Link from "~/components/Link";
+import Portrait from "~/components/Portrait";
 import {
   Container,
   CopyColumn,
@@ -8,14 +11,13 @@ import {
   Separator,
   SocialLinks,
 } from "./styled";
-import analytics from "../../analytics";
-import Link from "../Link";
-import Portrait from "../Portrait";
 
 const App = () => {
+  const analytics = useAnalytics();
+
   useEffect(() => {
     analytics.page({ title: "Index" });
-  }, []);
+  }, [analytics]);
 
   return (
     <Container>
