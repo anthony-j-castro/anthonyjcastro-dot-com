@@ -86,7 +86,7 @@ const App = () => {
             including Abstract, Verve, Observer Media, and Time Inc.
           </Paragraph>
           <Paragraph>
-            Send me a message at{" "}
+            Looking to get in touch with me? Send me a message at{" "}
             <Link
               href="mailto:hello@anthonyjcastro.com"
               onClick={() => {
