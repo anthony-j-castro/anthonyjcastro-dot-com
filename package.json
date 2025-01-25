@@ -28,8 +28,8 @@
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#semver:2.1.1",
     "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#semver:1.0.0",
-    "@babel/core": "7.26.0",
-    "@babel/preset-env": "7.26.0",
+    "@babel/core": "7.26.7",
+    "@babel/preset-env": "7.26.7",
     "@playwright/test": "1.49.1",
     "@types/node": "22.10.10",
     "@types/react": "19.0.8",
