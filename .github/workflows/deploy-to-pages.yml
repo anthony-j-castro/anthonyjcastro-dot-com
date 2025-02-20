@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-ready:
+  ready:
     runs-on: ubuntu-latest
     steps:
       - name: Ready
