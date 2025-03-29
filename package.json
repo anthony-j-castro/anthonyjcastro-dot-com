@@ -20,8 +20,8 @@
     "@analytics/google-analytics": "1.1.0",
     "analytics": "0.8.16",
     "modern-normalize": "3.0.1",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "styled-components": "6.1.16",
     "use-analytics": "1.1.0"
   },
