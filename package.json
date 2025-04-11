@@ -33,7 +33,7 @@
     "@playwright/test": "1.51.1",
     "@types/node": "22.14.0",
     "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
+    "@types/react-dom": "19.1.2",
     "@types/use-analytics": "0.0.3",
     "babel-loader": "10.0.0",
     "copy-webpack-plugin": "13.0.0",
