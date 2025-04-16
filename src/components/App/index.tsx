@@ -55,9 +55,9 @@ const App = () => {
           <Paragraph>
             I’m an engineering manager at CircleCI living in New York, NY. I
             also co-host{" "}
-            <em>Beyond the Build: Code, Culture, and Everything in Between</em>, a
-            podcast dedicated to helping engineering managers and leaders build
-            great teams. You can give it a listen on{" "}
+            <em>Beyond the Build: Code, Culture, and Everything in Between</em>,
+            a podcast dedicated to helping engineering managers and leaders
+            build great teams. You can give it a listen on{" "}
             <Link
               href="https://podcasts.apple.com/us/podcast/beyond-the-build-code-culture-and-everything-between/id1779379455?i=1000676717231"
               onClick={() => {
