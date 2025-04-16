@@ -55,7 +55,7 @@ const App = () => {
           <Paragraph>
             I’m an engineering manager at CircleCI living in New York, NY. I
             also co-host{" "}
-            <em>Beyond the Build: Code, Culture, and Everything Between</em>, a
+            <em>Beyond the Build: Code, Culture, and Everything in Between</em>, a
             podcast dedicated to helping engineering managers and leaders build
             great teams. You can give it a listen on{" "}
             <Link
