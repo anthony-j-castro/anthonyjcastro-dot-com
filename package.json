@@ -22,7 +22,7 @@
     "modern-normalize": "3.0.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "styled-components": "6.1.17",
+    "styled-components": "6.1.18",
     "use-analytics": "1.1.0"
   },
   "devDependencies": {
