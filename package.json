@@ -32,7 +32,7 @@
     "@babel/preset-env": "7.27.2",
     "@playwright/test": "1.52.0",
     "@types/node": "22.15.29",
-    "@types/react": "19.1.5",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "@types/use-analytics": "0.0.3",
     "babel-loader": "10.0.0",
