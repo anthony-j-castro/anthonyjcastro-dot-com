@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@anthony-j-castro/eslint-config": "github:anthony-j-castro/eslint-config#v4.1.1",
-    "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#v1.1.1",
+    "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#v1.1.2",
     "@babel/core": "7.27.7",
     "@babel/preset-env": "7.27.2",
     "@playwright/test": "1.53.1",
