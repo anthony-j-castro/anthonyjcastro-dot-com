@@ -30,7 +30,7 @@
     "@anthony-j-castro/prettier-config": "github:anthony-j-castro/prettier-config#v1.1.2",
     "@babel/core": "7.28.0",
     "@babel/preset-env": "7.28.0",
-    "@playwright/test": "1.54.1",
+    "@playwright/test": "1.54.2",
     "@types/node": "22.16.5",
     "@types/react": "19.1.9",
     "@types/react-dom": "19.1.7",
