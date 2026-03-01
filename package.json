@@ -31,7 +31,7 @@
     "@babel/core": "7.28.5",
     "@babel/preset-env": "7.28.5",
     "@playwright/test": "1.58.2",
-    "@types/node": "24.10.15",
+    "@types/node": "24.11.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@types/use-analytics": "0.0.3",
