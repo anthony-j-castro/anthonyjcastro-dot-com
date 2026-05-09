@@ -20,6 +20,19 @@ body {
   background-color: #fafafa;
 }
 
+a {
+  color: #00bcd4;
+  text-decoration: none;
+
+  &:visited {
+    color: #008899;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 #root {
   width: 100%;
   height: 100%;
