@@ -9,7 +9,7 @@ const App = () => {
   const analytics = useAnalytics();
 
   useEffect(() => {
-    analytics.page({ title: "Index" });
+    void analytics.page({ title: "Index" });
   }, [analytics]);
 
   return (
@@ -21,7 +21,7 @@ const App = () => {
             <a
               href="https://www.linkedin.com/in/anthonyjcastro/"
               onClick={() => {
-                analytics.track("clicked_linkedin_link");
+                void analytics.track("clicked_linkedin_link");
               }}
               rel="noreferrer"
               target="_blank"
@@ -32,7 +32,7 @@ const App = () => {
             <a
               href="https://github.com/anthony-j-castro"
               onClick={() => {
-                analytics.track("clicked_github_link");
+                void analytics.track("clicked_github_link");
               }}
               rel="noreferrer"
               target="_blank"
@@ -57,7 +57,7 @@ const App = () => {
             <a
               href="https://podcasts.apple.com/us/podcast/beyond-the-build-code-culture-and-everything-between/id1779379455?i=1000676717231"
               onClick={() => {
-                analytics.track("clicked_apple_podcasts_link");
+                void analytics.track("clicked_apple_podcasts_link");
               }}
               rel="noreferrer"
               target="_blank"
@@ -68,7 +68,7 @@ const App = () => {
             <a
               href="https://open.spotify.com/show/0ldZVVVIEBljKAKrYRHIB3?si=03db250affce4195"
               onClick={() => {
-                analytics.track("clicked_spotify_link");
+                void analytics.track("clicked_spotify_link");
               }}
               rel="noreferrer"
               target="_blank"
@@ -88,7 +88,7 @@ const App = () => {
             <a
               href="mailto:hello@anthonyjcastro.com"
               onClick={() => {
-                analytics.track("clicked_email_link");
+                void analytics.track("clicked_email_link");
               }}
               rel="noreferrer"
               target="_blank"
