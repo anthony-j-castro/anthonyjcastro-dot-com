@@ -12,12 +12,13 @@ import stylistic from "@stylistic/eslint-plugin";
 
 export default defineConfig([
   globalIgnores(["dist"]),
+
   {
     files: ["**/*.{ts,tsx}"],
     plugins: {
       "import-x": importX,
-      perfectionist,
       "@stylistic": stylistic,
+      "import-x": importX,
     },
     extends: [
       js.configs.recommended,
@@ -26,15 +27,16 @@ export default defineConfig([
       importX.flatConfigs.recommended,
       importX.flatConfigs.typescript,
       reactHooks.configs.flat.recommended,
+      perfectionist.configs["recommended-natural"],
       reactRefresh.configs.vite,
     ],
     languageOptions: {
       ecmaVersion: "latest",
-      sourceType: "module",
       globals: globals.browser,
       parserOptions: {
         projectService: true,
       },
+      sourceType: "module",
     },
     rules: {
       ...rules,
