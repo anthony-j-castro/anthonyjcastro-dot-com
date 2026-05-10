@@ -1,109 +1,104 @@
+import { clsx } from "clsx";
 import { useEffect } from "react";
 import { useAnalytics } from "use-analytics";
-import Link from "~/components/Link";
 import Portrait from "~/components/Portrait";
-import {
-  Container,
-  CopyColumn,
-  GreetingParagraph,
-  Main,
-  Paragraph,
-  Separator,
-  SocialLinks,
-} from "./styled";
+import styles from "./style.module.css";
 
 const App = () => {
   const analytics = useAnalytics();
 
   useEffect(() => {
-    analytics.page({ title: "Index" });
+    void analytics.page({ title: "Index" });
   }, [analytics]);
 
   return (
-    <Container>
-      <Main>
+    <div className={styles.container}>
+      <main className={styles.main}>
         <div>
           <Portrait />
-          <SocialLinks>
-            <Link
+          <div className={styles.socialLinks}>
+            <a
               href="https://www.linkedin.com/in/anthonyjcastro/"
               onClick={() => {
-                analytics.track("clicked_linkedin_link");
+                void analytics.track("clicked_linkedin_link");
               }}
               rel="noreferrer"
               target="_blank"
             >
               LinkedIn
-            </Link>
-            <Separator>|</Separator>
-            <Link
+            </a>
+            <span className={styles.separator}>|</span>
+            <a
               href="https://github.com/anthony-j-castro"
               onClick={() => {
-                analytics.track("clicked_github_link");
+                void analytics.track("clicked_github_link");
               }}
               rel="noreferrer"
               target="_blank"
             >
               GitHub
-            </Link>
-          </SocialLinks>
+            </a>
+          </div>
         </div>
-        <CopyColumn>
-          <GreetingParagraph data-testid="greeting">
+        <div className={styles.column}>
+          <p
+            className={clsx(styles.paragraph, styles.greeting)}
+            data-testid="greeting"
+          >
             Hi! I’m Anthony.
-          </GreetingParagraph>
-          <Paragraph>
+          </p>
+          <p className={styles.paragraph}>
             I’m an engineering manager at CircleCI living in New York, NY. I
             also co-host{" "}
             <em>Beyond the Build: Code, Culture, and Everything in Between</em>,
             a podcast dedicated to helping engineering managers and leaders
             build great teams. You can give it a listen on{" "}
-            <Link
+            <a
               href="https://podcasts.apple.com/us/podcast/beyond-the-build-code-culture-and-everything-between/id1779379455?i=1000676717231"
               onClick={() => {
-                analytics.track("clicked_apple_podcasts_link");
+                void analytics.track("clicked_apple_podcasts_link");
               }}
               rel="noreferrer"
               target="_blank"
             >
               Apple Podcasts
-            </Link>{" "}
+            </a>{" "}
             or{" "}
-            <Link
+            <a
               href="https://open.spotify.com/show/0ldZVVVIEBljKAKrYRHIB3?si=03db250affce4195"
               onClick={() => {
-                analytics.track("clicked_spotify_link");
+                void analytics.track("clicked_spotify_link");
               }}
               rel="noreferrer"
               target="_blank"
             >
               Spotify
-            </Link>
+            </a>
             .
-          </Paragraph>
-          <Paragraph>
+          </p>
+          <p className={styles.paragraph}>
             Before becoming an EM, I spent a decade as a software engineer
             working on web applications, mostly on the front end. I’ve worked in
             a variety of industries on different types of teams at companies
             including Abstract, Verve, Observer Media, and Time Inc.
-          </Paragraph>
-          <Paragraph>
+          </p>
+          <p className={styles.paragraph}>
             Looking to get in touch with me? Send me a message at{" "}
-            <Link
+            <a
               href="mailto:hello@anthonyjcastro.com"
               onClick={() => {
-                analytics.track("clicked_email_link");
+                void analytics.track("clicked_email_link");
               }}
               rel="noreferrer"
               target="_blank"
             >
               hello@anthonyjcastro.com
-            </Link>
+            </a>
             .
-          </Paragraph>
-        </CopyColumn>
-      </Main>
-    </Container>
+          </p>
+        </div>
+      </main>
+    </div>
   );
 };
 

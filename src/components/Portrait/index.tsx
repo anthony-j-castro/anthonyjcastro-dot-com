@@ -1,6 +1,6 @@
+import { clsx } from "clsx";
 import { useEffect, useRef, useState } from "react";
-import portraitSrc from "./images/portrait.png";
-import { Image } from "./styled";
+import styles from "./style.module.css";
 
 const CONSTRAIN_LIMIT_IN_DEGREES = 2;
 const TILT_DIVISOR = 20;
@@ -96,11 +96,11 @@ const Portrait = ({ className }: Props) => {
   }, []);
 
   return (
-    <Image
-      className={className}
+    <img
+      className={clsx(styles.portrait, className)}
       draggable={false}
       ref={portraitRef}
-      src={portraitSrc}
+      src="/images/portrait.png"
       style={{
         transform: `perspective(300px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
       }}

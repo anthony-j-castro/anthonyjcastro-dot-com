@@ -1,9 +1,18 @@
-const environment =
-  process.env.NODE_ENV === "production" ? "production" : "development";
+import { exact, string, type Decoder } from "decoders";
 
+interface Config {
+  GOOGLE_ANALYTICS_MEASUREMENT_ID: string;
+}
+
+const configDecoder: Decoder<Config> = exact({
+  GOOGLE_ANALYTICS_MEASUREMENT_ID: string,
+});
+
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 const config = {
-  ENVIRONMENT: environment,
-  GOOGLE_ANALYTICS_MEASUREMENT_ID: process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID,
+  GOOGLE_ANALYTICS_MEASUREMENT_ID: import.meta.env
+    .VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID,
 };
+/* eslint-enable @typescript-eslint/no-unsafe-assignment */
 
-export default config;
+export default configDecoder.verify(config);
