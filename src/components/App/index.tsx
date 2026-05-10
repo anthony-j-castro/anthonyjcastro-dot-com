@@ -1,9 +1,8 @@
+import { clsx } from "clsx";
 import { useEffect } from "react";
 import { useAnalytics } from "use-analytics";
 import Portrait from "~/components/Portrait";
-import config from "~/config";
 import styles from "./style.module.css";
-import clsx from "clsx";
 
 const App = () => {
   const analytics = useAnalytics();
@@ -95,7 +94,7 @@ const App = () => {
             >
               hello@anthonyjcastro.com
             </a>
-            . ID{config.GOOGLE_ANALYTICS_MEASUREMENT_ID}
+            .
           </p>
         </div>
       </main>

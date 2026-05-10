@@ -1,6 +1,6 @@
+import { clsx } from "clsx";
 import { useEffect, useRef, useState } from "react";
 import styles from "./style.module.css";
-import clsx from "clsx";
 
 const CONSTRAIN_LIMIT_IN_DEGREES = 2;
 const TILT_DIVISOR = 20;

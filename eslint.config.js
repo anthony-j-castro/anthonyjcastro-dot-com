@@ -6,6 +6,7 @@ import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 import packageJson from "eslint-plugin-package-json";
 import { importX } from "eslint-plugin-import-x";
+import perfectionist from "eslint-plugin-perfectionist";
 import rules from "./eslint-rules.js";
 
 export default defineConfig([
@@ -14,6 +15,7 @@ export default defineConfig([
     files: ["**/*.{ts,tsx}"],
     plugins: {
       "import-x": importX,
+      perfectionist,
     },
     extends: [
       js.configs.recommended,
@@ -34,6 +36,15 @@ export default defineConfig([
     },
     rules: {
       ...rules,
+    },
+  },
+  {
+    files: ["eslint-rules.js"],
+    plugins: {
+      perfectionist,
+    },
+    rules: {
+      "perfectionist/sort-objects": ["error", { newlinesBetween: 0 }],
     },
   },
   {
