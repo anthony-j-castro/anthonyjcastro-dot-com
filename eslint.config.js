@@ -9,6 +9,7 @@ import { importX } from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
 import rules from "./eslint-rules.js";
 import stylistic from "@stylistic/eslint-plugin";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -18,7 +19,7 @@ export default defineConfig([
     plugins: {
       "import-x": importX,
       "@stylistic": stylistic,
-      "import-x": importX,
+      unicorn: eslintPluginUnicorn,
     },
     extends: [
       js.configs.recommended,
