@@ -8,6 +8,7 @@ import packageJson from "eslint-plugin-package-json";
 import { importX } from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
 import rules from "./eslint-rules.js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -16,6 +17,7 @@ export default defineConfig([
     plugins: {
       "import-x": importX,
       perfectionist,
+      "@stylistic": stylistic,
     },
     extends: [
       js.configs.recommended,
