@@ -33,7 +33,7 @@
     "@babel/preset-env": "7.29.5",
     "@csstools/postcss-global-data": "4.0.0",
     "@eslint/js": "10.0.1",
-    "@playwright/test": "1.59.1",
+    "@playwright/test": "1.60.0",
     "@rolldown/plugin-babel": "0.2.3",
     "@stylistic/eslint-plugin": "5.10.0",
     "@types/node": "25.6.2",
