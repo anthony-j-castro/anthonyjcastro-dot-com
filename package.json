@@ -40,7 +40,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@types/use-analytics": "0.0.3",
-    "@vitejs/plugin-react": "6.0.1",
+    "@vitejs/plugin-react": "6.0.2",
     "babel-plugin-react-compiler": "1.0.0",
     "decoders": "2.9.3",
     "eslint": "10.4.0",
