@@ -23,8 +23,8 @@
     "analytics": "0.8.19",
     "clsx": "2.1.1",
     "modern-normalize": "3.0.1",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "use-analytics": "1.1.0"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "@rolldown/plugin-babel": "0.2.3",
     "@stylistic/eslint-plugin": "5.10.0",
     "@types/node": "25.9.1",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
     "@types/use-analytics": "0.0.3",
     "@vitejs/plugin-react": "6.0.2",
