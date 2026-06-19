@@ -4,7 +4,7 @@ import { useAnalytics } from "use-analytics";
 import Portrait from "~/components/Portrait";
 import styles from "./style.module.css";
 
-const App = () => {
+export default function App() {
   const analytics = useAnalytics();
 
   useEffect(() => {
@@ -100,6 +100,4 @@ const App = () => {
       </main>
     </div>
   );
-};
-
-export default App;
+}
