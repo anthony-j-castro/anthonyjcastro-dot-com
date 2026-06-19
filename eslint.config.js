@@ -13,7 +13,6 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 export default defineConfig([
   globalIgnores(["dist"]),
-
   {
     files: ["**/*.{ts,tsx}"],
     plugins: {
@@ -41,6 +40,25 @@ export default defineConfig([
     },
     rules: {
       ...rules,
+    },
+  },
+  {
+    files: ["**/*.{jsx,tsx}"],
+    rules: {
+      "unicorn/name-replacements": [
+        "error",
+        {
+          replacements: {
+            param: false,
+            params: false,
+            prev: false,
+            prop: false,
+            props: false,
+            ref: false,
+            refs: false,
+          },
+        },
+      ],
     },
   },
   {
