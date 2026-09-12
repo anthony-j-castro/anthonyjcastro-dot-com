@@ -34,7 +34,7 @@
     "@csstools/postcss-global-data": "4.0.0",
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.62.1",
-    "@rolldown/plugin-babel": "0.2.3",
+    "@rolldown/plugin-babel": "0.2.4",
     "@stylistic/eslint-plugin": "5.10.0",
     "@types/node": "25.9.5",
     "@types/react": "19.3.0",
