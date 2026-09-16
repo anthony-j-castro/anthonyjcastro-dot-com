@@ -42,7 +42,7 @@
     "@types/use-analytics": "0.0.3",
     "@vitejs/plugin-react": "6.1.1",
     "babel-plugin-react-compiler": "1.0.0",
-    "decoders": "2.9.3",
+    "decoders": "2.10.1",
     "eslint": "10.10.0",
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import-x": "4.17.1",
